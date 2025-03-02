@@ -1,9 +1,10 @@
 package com.todo.todoProject.model;
 
 import jakarta.persistence.Entity;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
 
 
 /*
@@ -12,12 +13,15 @@ TODO
  no, ,task, discription, status, add, update, delete task
  */
 @Entity
+@Data
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Todo {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int taskId;
     private String taskName;
     private String disc;

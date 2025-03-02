@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ToodoProjectApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(ToodoProjectApplication.class, args);
 	}
 
