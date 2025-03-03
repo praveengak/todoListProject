@@ -23,9 +23,9 @@ public class TodoController {
     /*
     in the blow method I should be able to update the existing todolist
      */
-    @PutMapping("/update/{taskId}")
-    public void updateTask(int taskId){
-        todoService.updateTask(taskId);
+    @PutMapping("/update")
+    public void updateTask(@RequestBody Todo todo){
+        todoService.updateTask(todo);
     }
 
     @GetMapping("/listOfAllTodoTask")

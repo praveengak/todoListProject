@@ -20,6 +20,7 @@ TODO
 @AllArgsConstructor
 public class Todo {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int taskId;

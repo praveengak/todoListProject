@@ -11,8 +11,6 @@ import java.util.List;
 public class TodoService {
 
 
-
-
     @Autowired
     TodoRepo todoRepo;
 
@@ -24,8 +22,13 @@ public class TodoService {
         todoRepo.save(newTodo);
     }
 
-    public void updateTask(int taskId) {
-
+    public void updateTask(Todo todo) {
+        Todo newTodo= new Todo();
+        newTodo.setTaskId(todo.getTaskId());
+        newTodo.setTaskName(todo.getTaskName());
+        newTodo.setDisc(todo.getDisc());
+        newTodo.setTaskStatus(todo.isTaskStatus());
+        todoRepo.save(newTodo);
     }
 
     public List<Todo> listOfAllTodoTask() {
