@@ -34,4 +34,8 @@ public class TodoService {
     public List<Todo> listOfAllTodoTask() {
         return todoRepo.findAll();
     }
+
+    public void deleteTodo(int taskId) {
+        todoRepo.deleteById(taskId);
+    }
 }

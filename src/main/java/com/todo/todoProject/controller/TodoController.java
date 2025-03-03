@@ -33,4 +33,9 @@ public class TodoController {
         return todoService.listOfAllTodoTask();
     }
 
+    @DeleteMapping("/delete/{taskId}")
+    public void deleteTodo(@PathVariable int taskId){
+        todoService.deleteTodo(taskId);
+    }
+
 }
